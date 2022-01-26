@@ -1,2 +1,3 @@
 console.log("Hello");
-console.log("Hello2");
+let firstName = 'Hi';
+console.log(firstName);
