@@ -6,7 +6,8 @@ class Lab1_ex9 {
         System.out.print("Input your name : ");
         String a=Obj.nextLine();
         System.out.print("Input your age : ");
-        String b=Obj.nextLine();
+        // String b=Obj.nextLine();
+        int b = Integer.parseInt(Obj.nextLine());
         System.out.print("Input your address : ");
         String c=Obj.nextLine();
 

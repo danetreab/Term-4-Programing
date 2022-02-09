@@ -1,0 +1,19 @@
+@font-face {
+    font-family: battambang;
+    src: url(font/Battambang-Regular.ttf);
+}
+.text{
+    text-align: center;
+    font-family: battambang;
+}
+.image{
+    align-items: left;
+}
+.title{
+    font-family: battambang;
+    font-weight: bold;
+    font-size: 3vh;
+}
+.body{
+    margin: auto;
+}

@@ -6,7 +6,7 @@ class Lab1_ex10 {
         final float pi = 3.14f; 
         System.out.print("Enter the radius of the circle : ");
         float a=Obj.nextFloat();
-        float area=pi*a*a,perimeter=2*pi*a;
+        float area=pi*a*a, perimeter=2*pi*a;
         System.out.println("Area of circle : "+area);
         System.out.println("Perimeter of circle : "+perimeter);
     }
