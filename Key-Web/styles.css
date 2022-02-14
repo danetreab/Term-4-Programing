@@ -206,6 +206,7 @@
     }
   }
   
+  
   .dark {
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
@@ -242,4 +243,3 @@
   .solar #solarIcon {
     display: block;
   }
-  
