@@ -1,0 +1,7 @@
+@font-face {
+    font-family: battambang;
+    src: url(../font/Battambang-Regular.ttf);
+}
+.p{
+    font-family: battambang;
+}
