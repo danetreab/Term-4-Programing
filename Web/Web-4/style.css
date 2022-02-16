@@ -1,7 +1,52 @@
 @font-face {
     font-family: battambang;
-    src: url(../font/Battambang-Regular.ttf);
+    src: url(Battambang-Regular.ttf);
 }
-.p{
+p,li{
     font-family: battambang;
+    font-size:small;
+}
+h2{
+    font-family: battambang;
+
+}
+body{
+    margin: 5vh;
+    margin-left: 13vh;
+    margin-right: 13vh;
+}
+#title ul{
+    
+    padding: 8px;
+    display: table;
+    list-style: none;
+    border: 1px solid black;
+}
+#title ul p{
+    text-align: center;
+}
+a{
+    color: #0645ad;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+  }
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #a2a9b1 ;
+    padding: 3px;
+}
+#title-img{
+    font-family: battambang;
+    margin-left: 13%;
+}
+html{
+    scroll-behavior: smooth;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
 }
