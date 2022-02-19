@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="56" viewBox="0 0 85 56">
+  <g id="Group_1" data-name="Group 1" transform="translate(-24 -24)">
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(53 53)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="27" height="27" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="26" height="26" rx="4.5" fill="none"/>
+    </g>
+    <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(82 53)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="27" height="27" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="26" height="26" rx="4.5" fill="none"/>
+    </g>
+    <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(24 53)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="27" height="27" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="26" height="26" rx="4.5" fill="none"/>
+    </g>
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(53 24)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="27" height="27" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="26" height="26" rx="4.5" fill="none"/>
+    </g>
+    <text id="W" transform="translate(67 44)" fill="#707070" font-size="15" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-8.445" y="0">W</tspan></text>
+    <text id="A" transform="translate(32 72)" fill="#707070" font-size="15" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">A</tspan></text>
+    <text id="S" transform="translate(62 72)" fill="#707070" font-size="15" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">S</tspan></text>
+    <text id="D" transform="translate(89 72)" fill="#707070" font-size="15" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">D</tspan></text>
+  </g>
+</svg>

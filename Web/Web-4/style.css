@@ -5,6 +5,7 @@
 p,li{
     font-family: battambang;
     font-size:small;
+    text-indent: 3vw;
 }
 h2{
     font-family: battambang;
@@ -47,6 +48,7 @@ html{
     scroll-behavior: smooth;
 }
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }

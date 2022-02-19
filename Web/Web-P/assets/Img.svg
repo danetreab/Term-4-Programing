@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="286" height="40" viewBox="0 0 286 40">
+  <g id="Group_2" data-name="Group 2" transform="translate(-39 -44)">
+    <text id="Web-Developer" transform="translate(118 76)" fill="#4f46e5" font-size="30" font-family="JosefinSans-Regular, Josefin Sans"><tspan x="0" y="0">Web-Developer</tspan></text>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(39 44)" fill="#48474e" stroke="#707070" stroke-width="1">
+      <circle cx="19.5" cy="19.5" r="19.5" stroke="none"/>
+      <circle cx="19.5" cy="19.5" r="19" fill="none"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(50 44)" fill="#4f46e5" stroke="#707070" stroke-width="1">
+      <circle cx="19.5" cy="19.5" r="19.5" stroke="none"/>
+      <circle cx="19.5" cy="19.5" r="19" fill="none"/>
+    </g>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(59 44)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="19.5" cy="19.5" r="19.5" stroke="none"/>
+      <circle cx="19.5" cy="19.5" r="19" fill="none"/>
+    </g>
+  </g>
+</svg>

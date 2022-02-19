@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Prompt:wght@400;800&display=swap');
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Prompt', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 5vw;
+}
+header nav ul li{
+    display: inline-block;
+    padding: 0 20px ;
+    font-family: 'Prompt', sans-serif;
+}
+.nav-link{
+    text-decoration: none;
+    font-family: 'Prompt', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+.nav-link-contact{
+    color: white;
+    background-color: #4F46E5;
+    text-decoration: none;
+    padding: 6px 18px;
+    border-radius: 22px;
+    font-size: 20px;
+}
+header nav ul{
+    padding-right: 5vw;
+}
+.logo{
+    display: inline-flex;
+    width: 30px;
+}
+.Home{
+    padding-top: 80px;
+    display: flex;
+}
+.moon{
+    width: 45vw;
+    margin: -40px;
+}
+.text-hi{
+    font-family: 'Prompt', sans-serif;
+    font-size: 7vw;
+    font-weight: bold;
+    color: #4F46E5;
+}
+.text{
+    font-family: 'Prompt', sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+}
+.moon-text{
+    display: block;
+    padding-top: 40px;
+    padding-left: 15vw;
+    text-align: center;
+}
+.effect{
+    margin-top: -5vw;
+    margin-right: -5vw;
+    width: 35vw;
+}
+.p-tag{
+    text-align: left;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    opacity: 40%;
+    font-size: 1.7vw;
+}
+.media{
+    padding-bottom: 25px;
+    width: 10vw;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    transition: all 0.3s ease 0s;
+}
+a:hover{
+    color: antiquewhite;
+    background-color: black;
+    padding: 6px 2rem;
+    border-radius: 25px;
+}
+.About{
+    padding: 100px 50px;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.about-title{
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+    color:#4F46E5;
+    padding-left: 2vw;
+}
+.about-dis{
+    font-family: 'Prompt', sans-serif;
+    font-size: 30px;
+    padding-left: 6vw;
+    padding-top: 5vw;
+    padding-right: 8vw;
+}
+.profile{
+    padding-top: 40px;
+}
+.flex-contact{
+    font-family: 'Prompt', sans-serif;
+    font-size: 2rem;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.flex-contact img{
+    width: 3rem;
+    margin-right: 1rem;
+}
+.contact{
+    display: table;
+    padding: 2rem 2rem;
+    border: 1px solid #707070;
+    margin:8rem -5rem;
+}
+form{
+    border: 1px solid black;
+    padding: 3rem;
+    margin: 8rem;
+}
+form textarea,input,label{
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.5rem;
+}
+form button{
+    margin-top: 1rem;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.5rem;
+    padding: 0 17px;
+    color: white;
+    background-color: #4F46E5;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+form button:hover{
+    color: antiquewhite;
+    background-color: black;
+    padding: 0px 2rem;
+    border-radius: 25px;
+}
+form{
+    padding: 1rem;
+}
+@media only screen and (max-width : 1350px){
+    /* *{
+        overflow-x: hidden;
+    } */
+    .logo img{
+        display: none;
+
+    }
+    .nav-link,.nav-link-contact{
+        font-size: 0.8rem;
+    }
+    .Home{
+        display: block;
+    }
+    .moon{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        width: 25rem;
+    }
+    .p-tag{
+        margin-top: 30px;
+        margin-left: 50px;
+        font-size: 1rem;
+    }
+    .text-hi{
+        margin-right: 8rem;
+        font-size: 5rem;
+    }
+    .text{
+        margin-right: 8rem;
+        font-size: 1.5rem;
+    }
+    .media{
+        margin-right: 8rem;
+        width: 5rem;
+    }
+    .About{
+        display: block;
+    }
+    .about-title{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .about-dis{
+        font-size: 1rem;
+    }
+    .profile{
+        width: 15rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #contact{
+        display: block;
+        margin-top: -7rem;
+    }
+    .contact{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.5rem;
+        margin-top: 1rem;
+    }
+    .flex-contact{
+        font-size: 1rem;
+    }
+    .flex-contact img{
+        width: 2rem;
+    }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+    .send-mail label,input{
+        font-size: 1rem;
+    }
+    textarea{
+        
+        width: auto;
+        height: auto
+    }
+    input,textarea{
+        width: 15rem;
+    }
+    form{
+        padding: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    a{
+        transition: all 0.3s ease 0s;
+    }
+    a:hover{
+        color: antiquewhite;
+        background-color: black;
+        padding: 6px 0.5rem;
+        border-radius: 25px;
+    }
+    .nav-link-contact{
+        padding: 6px 0.6rem;
+    }
+}
