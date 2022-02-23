@@ -1,6 +1,7 @@
 public class Circle extends Shape {
     public double radius;
     public Circle(int i) {
+        this.i=i;
     }
     public Circle(){
         
