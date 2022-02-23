@@ -4,7 +4,7 @@ public class Human {
     public Human(){
 
     }
-    public Human(Stirng name,int age){
+    public Human(String name,int age){
         this.age=age;
         this.name=name;
     }
