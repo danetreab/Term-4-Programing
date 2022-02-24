@@ -3,9 +3,8 @@ import java.util.Scanner;
 public class MainForDog {
     public static void main(String[] args) {
         Dog dog = new Dog();
-        Dog dogs = new Dog();
+        Dog dogs = new Dog("KILI");
         fillData(dog);
-        fillData_(dogs);
     }
     public static void fillData(Dog dogs) {
         Scanner Obj = new Scanner(System.in);
