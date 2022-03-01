@@ -1,13 +1,3 @@
-.Head{
-    display: flex;
-}
-.Text{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 5rem;
+.tag1, .tag2{
     color: blue;
-}
-.Picture{
-    width: 25%;
 }
