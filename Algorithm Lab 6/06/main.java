@@ -4,8 +4,5 @@ public class main {
         DoAble woman = new Human("Mary", 18, "Khmer");
         System.out.println(man);
         System.out.println(woman);
-        man.doThat();
-        woman.doThis();
-
     }
 }

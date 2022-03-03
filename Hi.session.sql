@@ -1,2 +1,0 @@
--- @block
-select * from worker;

@@ -1,6 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "Algorithm Lab 6\\01"
+        "Algorithm Lab 6/06"
     ],
     "sqltools.connections": [
         {
@@ -11,7 +11,7 @@
             "server": "localhost",
             "port": 3308,
             "driver": "MySQL",
-            "name": "Hi",
+            "name": "database",
             "database": "sqltest1",
             "username": "root",
             "password": ""
