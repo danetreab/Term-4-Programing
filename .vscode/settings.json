@@ -1,5 +1,20 @@
 {
     "java.project.sourcePaths": [
-        "Algorithm Lab 6\\04"
+        "Algorithm Lab 6\\01"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3308,
+            "driver": "MySQL",
+            "name": "Hi",
+            "database": "test",
+            "username": "root",
+            "password": ""
+        }
     ]
 }
