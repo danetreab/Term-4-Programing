@@ -1,0 +1,10 @@
+.root{
+    -fx-background-color:"black";
+}
+.label{
+    -fx-text-fill:"white";
+    -fx-alignment:center;
+}
+#css{
+    
+}

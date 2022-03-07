@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainController">
+   <children>
+      <TextField fx:id="firstnamefield" layoutX="103.0" layoutY="72.0" prefHeight="40.0" prefWidth="365.0" promptText="First name" />
+      <TextField fx:id="lastnamefield" layoutX="101.0" layoutY="123.0" prefHeight="40.0" prefWidth="365.0" promptText="Last name" />
+      <TextField fx:id="emailfield" layoutX="101.0" layoutY="173.0" prefHeight="40.0" prefWidth="365.0" promptText="Email" />
+      <TextField fx:id="addressfield" layoutX="102.0" layoutY="222.0" prefHeight="49.0" prefWidth="365.0" promptText="Address" />
+      <Button fx:id="submit" layoutX="122.0" layoutY="305.0" mnemonicParsing="false" onAction="#popup" text="Submit" />
+   </children>
+</AnchorPane>
