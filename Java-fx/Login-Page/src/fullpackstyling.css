@@ -12,21 +12,21 @@
 .button1
 {
     -fx-font-family: "Fredoka";
-    -fx-font-size : 15;
+    -fx-font-size : 16;
     -fx-background-color : #000000;
-    -fx-background-radius :  12;
+    /* -fx-background-radius :  12; */
 }
-.button1:hover
+/* .button1:hover
 {
     -fx-background-color : #524A7B ;
-    /* -fx-background-radius :  30; */
+    -fx-background-radius :  30;
 }
 .button1:pressed
 {
     -fx-font-size : 14.5;
     -fx-background-color : #2F2B43 ;
-    /* -fx-background-radius :  30; */
-}
+    -fx-background-radius :  30;
+} */
 
 .button2
 {

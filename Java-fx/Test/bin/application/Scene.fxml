@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="163.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton prefHeight="55.0" prefWidth="163.0" textFill="WHITE" />
+            <JFXButton onMouseClicked="#btn1" prefHeight="55.0" prefWidth="163.0" text="UI1" textFill="WHITE" />
+            <JFXButton onMouseClicked="#btn2" prefHeight="55.0" prefWidth="163.0" text="UI2" textFill="WHITE" />
+            <JFXButton onMouseClicked="#btn3" prefHeight="55.0" prefWidth="163.0" text="UI3" textFill="WHITE" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
