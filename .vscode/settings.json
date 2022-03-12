@@ -9,13 +9,13 @@
                 "authProtocol": "default"
             },
             "previewLimit": 50,
-            "server": "localhost",
-            "port": 3308,
+            "server": "sql6.freemysqlhosting.net",
+            "port": 3306,
             "driver": "MySQL",
             "name": "database",
-            "database": "userlogin",
-            "username": "root",
-            "password": ""
+            "database": "sql6478070",
+            "username": "sql6478070",
+            "password": "xcvQ1LVh1q"
         }
     ],
     "java.project.referencedLibraries": {

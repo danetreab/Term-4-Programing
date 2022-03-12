@@ -1,0 +1,17 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap'); */
+@font-face {
+    font-family: 'Fredoka';
+    src: url('Fredoka-Regular.ttf');
+}
+.label {
+    -fx-font-family: "Fredoka";
+    /* fx-font-family: 'Fredoka'; */
+}
+#login{
+    -fx-font-family: "Fredoka";
+    -fx-font-size:15;
+}
+.textfield{
+    -fx-font-family: "Fredoka";
+    -fx-font-size:15;
+}

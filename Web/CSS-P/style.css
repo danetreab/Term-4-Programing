@@ -57,10 +57,17 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 40px 0 30px;
+    /* 
+    -- align-items use to specifies the default alignment for items inside the flexible container.
+    -- justify-content aligns the flexible container's items when the items do not use all available space on the main-axis
+    */
 }
 nav ul li{
     list-style: none;
     display:  inline-block;
+    /* 
+    -- list-style use to defind how unorder list show it bullet point
+    */
 }
 nav ul li a{
     text-decoration: none;
@@ -70,6 +77,11 @@ nav ul li a{
     font-weight: 600;
     border-bottom: 2px solid transparent;
     transition: 0.4s;
+    /* 
+    -- margin-left create the space on the left out size the border
+    -- border-bottom use to create the line under the select element 
+    -- transition use to change property value over the given duration
+    */
 }
 nav ul li:not(:last-child) a:hover,
 nav ul li:not(:last-child) a:focus{
@@ -88,12 +100,18 @@ nav ul li.btn a{
     font-size: 14px;
     font-weight: 500;
     margin-left: 150px;
+    /* 
+    -- line-height set the height of a line box
+    */
 }
 nav ul li.btn:hover a{
     border: 1px solid white;
     color: black;
     background: white;
     transition: 0.4s;
+    /* 
+    -- border used to set the border on an element
+    */
 }
 .content{
     padding-top: 140px;
@@ -102,6 +120,9 @@ nav ul li.btn:hover a{
     position: relative;
     z-index: 2;
     margin-bottom: 50px;
+    /* 
+    -- z-index specifies the stack order of an element
+    */
 }
 .content .main-text h6{
     font-size: 14px;

@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -25,7 +26,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class SceneController {
+public class SceneController extends SHA256 {
     @FXML
     private Button END;
 
@@ -68,16 +69,17 @@ public class SceneController {
         stage.close();
         // System.out.println("exit");
     }
-    public void login(ActionEvent event){
+    public void login(ActionEvent event) throws NoSuchAlgorithmException{
         String username = usernamefild.getText();
-        String password = passwordfild.getText();
+        String tobehase = passwordfild.getText();
+        String password = toHexString(getSHA(tobehase));
         if(username.equals("")&&password.equals("")){
             JOptionPane.showMessageDialog(null, "Username or password blank");
         }
         else{
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                con=DriverManager.getConnection("jdbc:mysql://localhost:3308/userlogin?useSSL=false","root","");
+                con=DriverManager.getConnection("jdbc:mysql://sql6.freemysqlhosting.net/sql6478070","sql6478070","xcvQ1LVh1q");
                 pst=con.prepareStatement("select * from usercredential where username=? and password=?");
                 pst.setString(1,username);
                 pst.setString(2,password);
