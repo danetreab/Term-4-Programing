@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="1199.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" />
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="26.0" prefWidth="1013.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="1209.0" layoutY="10.0" spacing="5.0">
+               <children>
+                  <Circle fill="#049c02" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fill="#fdb001" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fill="#e81700" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Circle>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="719.0" prefWidth="235.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutY="-28.0" prefHeight="722.0" prefWidth="241.0" style="-fx-background-color: #ECEDF6;">
+               <children>
+                  <JFXButton prefHeight="76.0" prefWidth="249.0" text="Home">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="30" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="10.0" prefHeight="76.0" prefWidth="249.0" text="Category">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="" size="30" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="86.0" prefHeight="76.0" prefWidth="249.0" text="Author">
+                     <graphic>
+                        <FontAwesomeIconView />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="162.0" prefHeight="76.0" prefWidth="249.0" text="Publisher">
+                     <graphic>
+                        <FontAwesomeIconView />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="238.0" prefHeight="76.0" prefWidth="249.0" text="Book">
+                     <graphic>
+                        <FontAwesomeIconView />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="314.0" prefHeight="76.0" prefWidth="249.0" text="Member">
+                     <graphic>
+                        <FontAwesomeIconView />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="390.0" prefHeight="76.0" prefWidth="249.0" text="Issue Book">
+                     <graphic>
+                        <FontAwesomeIconView />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="466.0" prefHeight="76.0" prefWidth="249.0" text="Return Book">
+                     <graphic>
+                        <FontAwesomeIconView />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
