@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table ,tr,td{
+            border: 1px solid black;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+        .grid-item{
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .header{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            margin: 25px;
+            font-size: 1.2rem;
+        }
+        .button{
+            text-decoration: none;
+            background-color: #20C2E2;
+            color: white;
+            padding: 1 17;
+            border-radius: 30px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <p>Employee <strong>Details</strong></p>
+        <div class="button">
+            <p><a href=""><i class="fa-solid fa-plus"></i>Add New</a></p>
+    </div>
+    </div>
+        <div class="grid-container">
+            <div class="grid-item">Name</div>
+            <div class="grid-item">Email Address</div>
+            <div class="grid-item">Phone</div>
+            <div class="grid-item">Action</div>
+            <div class="grid-item">John Doe</div>
+            <div class="grid-item">johndoe@mail.com</div>
+            <div class="grid-item">(171) 555-2222</div>
+            <div class="grid-item"><i class="fa-solid fa-pen"></i>&nbsp;<i class="fa-solid fa-trash"></i></div>
+            <div class="grid-item">Peter Parker</div>
+            <div class="grid-item">peterparker@mail.com</div>
+            <div class="grid-item">(313) 555-5735</div>
+            <div class="grid-item"><i class="fa-solid fa-pen"></i>&nbsp;<i class="fa-solid fa-trash"></i></div>
+            <div class="grid-item">Fran Wilson</div>
+            <div class="grid-item">franwilson@mail.com</div>
+            <div class="grid-item">(503) 555-993 1</div>
+            <div class="grid-item"><i class="fa-solid fa-pen"></i>&nbsp;<i class="fa-solid fa-trash"></i></div>
+          </div>
+</body>
+</html>
