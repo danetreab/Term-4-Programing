@@ -2,90 +2,246 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <Pane prefHeight="26.0" prefWidth="1013.0" BorderPane.alignment="CENTER">
+<BorderPane fx:id="scenepanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainmenuController">
+   <left>
+      <Pane prefHeight="694.0" prefWidth="240.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="1209.0" layoutY="10.0" spacing="5.0">
+            <VBox layoutY="-33.0" prefHeight="720.0" prefWidth="240.0" style="-fx-background-color: #ECEDF6;">
                <children>
-                  <Circle fill="#049c02" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                  <Pane prefHeight="70.0" prefWidth="240.0">
+                     <children>
+                        <JFXButton onMouseClicked="#home" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="Home" />
+                        <FontAwesomeIconView glyphName="HOME" layoutX="43.0" layoutY="48.0" size="35" text="" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="70.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane prefHeight="70.0" prefWidth="240.0">
+                     <children>
+                        <JFXButton onMouseClicked="#category" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="      Category" />
+                        <FontAwesomeIconView glyphName="TH_LARGE" layoutX="44.0" layoutY="48.0" size="30" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="70.0" prefWidth="240.0">
+                     <children>
+                        <JFXButton onMouseClicked="#author" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="  Author" />
+                        <FontAwesomeIconView glyphName="PENCIL_SQUARE" layoutX="46.0" layoutY="48.0" size="34" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="70.0" prefWidth="240.0">
+                     <children>
+                        <JFXButton onMouseClicked="#publisher" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="      Publisher" />
+                        <FontAwesomeIconView glyphName="PRINT" layoutX="44.0" layoutY="48.0" size="35" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="70.0" prefWidth="240.0">
+                     <children>
+                        <JFXButton onMouseClicked="#book" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="Book" />
+                        <FontAwesomeIconView glyphName="BOOK" layoutX="45.0" layoutY="51.0" size="35" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="70.0" prefWidth="240.0">
+                     <children>
+                        <JFXButton onMouseClicked="#member" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="      Member" />
+                        <FontAwesomeIconView glyphName="USER_CIRCLE" layoutX="46.0" layoutY="49.0" size="30" text="" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="70.0" prefWidth="240.0">
+                     <children>
+                        <JFXButton onMouseClicked="#issue" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="          Issue Book" />
+                        <FontAwesomeIconView glyphName="BOOKMARK" layoutX="52.0" layoutY="48.0" size="30" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="70.0" prefWidth="240.0">
+                     <children>
+                        <JFXButton onMouseClicked="#returnbtn" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="             Return Book" />
+                        <FontAwesomeIconView glyphName="REPLY_ALL" layoutX="50.0" layoutY="48.0" size="30" />
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+   </left>
+   <top>
+      <AnchorPane prefWidth="1296.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="1209.0" layoutY="7.0" prefHeight="26.0" prefWidth="65.0">
+               <children>
+                  <Circle fx:id="min" fill="#049c02" onMouseClicked="#minimize" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" top="5.0" />
                      </HBox.margin>
                   </Circle>
                   <Circle fill="#fdb001" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" top="5.0" />
                      </HBox.margin>
                   </Circle>
-                  <Circle fill="#e81700" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                  <Circle fill="#e81700" onMouseClicked="#exit" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" top="5.0" />
                      </HBox.margin>
                   </Circle>
                </children>
             </HBox>
          </children>
-      </Pane>
+      </AnchorPane>
    </top>
-   <left>
-      <Pane prefHeight="719.0" prefWidth="235.0" BorderPane.alignment="CENTER">
+   <center>
+      <Pane fx:id="ap" prefHeight="659.0" prefWidth="1040.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutY="-28.0" prefHeight="722.0" prefWidth="241.0" style="-fx-background-color: #ECEDF6;">
+            <Circle layoutX="100.0" layoutY="687.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <Circle layoutX="1026.0" layoutY="387.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <Circle layoutX="565.0" layoutY="142.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <Label layoutX="100.0" layoutY="76.0" opacity="0.5" styleClass="text" stylesheets="@../fullpackstyling.css" text="Library information">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="26.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Dashboard" textFill="#0091ff">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutY="174.0" prefWidth="1040.0">
                <children>
-                  <JFXButton prefHeight="76.0" prefWidth="249.0" text="Home">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="HOME" size="30" />
-                     </graphic>
-                     <VBox.margin>
-                        <Insets top="50.0" />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="10.0" prefHeight="76.0" prefWidth="249.0" text="Category">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="" size="30" text="" />
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="86.0" prefHeight="76.0" prefWidth="249.0" text="Author">
-                     <graphic>
-                        <FontAwesomeIconView />
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="162.0" prefHeight="76.0" prefWidth="249.0" text="Publisher">
-                     <graphic>
-                        <FontAwesomeIconView />
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="238.0" prefHeight="76.0" prefWidth="249.0" text="Book">
-                     <graphic>
-                        <FontAwesomeIconView />
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="314.0" prefHeight="76.0" prefWidth="249.0" text="Member">
-                     <graphic>
-                        <FontAwesomeIconView />
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="390.0" prefHeight="76.0" prefWidth="249.0" text="Issue Book">
-                     <graphic>
-                        <FontAwesomeIconView />
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="466.0" prefHeight="76.0" prefWidth="249.0" text="Return Book">
-                     <graphic>
-                        <FontAwesomeIconView />
-                     </graphic>
-                  </JFXButton>
+                  <Pane prefHeight="170.0" prefWidth="170.0" style="-fx-border-color: #707070; -fx-border-radius: 30; -fx-border-width: 2;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="17.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Members" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="128.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="153">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIconView glyphName="USER" layoutX="33.0" layoutY="50.0" size="40" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane prefHeight="170.0" prefWidth="170.0" style="-fx-border-color: #707070; -fx-border-radius: 30; -fx-border-width: 2;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="17.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Daily Read" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="128.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="12">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIconView glyphName="ADDRESS_BOOK" layoutX="31.0" layoutY="48.0" size="40" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane prefHeight="170.0" prefWidth="170.0" style="-fx-border-color: #707070; -fx-border-radius: 30; -fx-border-width: 2;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="17.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Total Book" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Icons525View glyphName="BOOKS" layoutX="27.0" layoutY="52.0" size="40" />
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="129.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="150">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Pane>
                </children>
-            </VBox>
+            </HBox>
+            <Label layoutX="34.0" layoutY="362.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="History" textFill="#0091ff">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="412.0" opacity="0.5" styleClass="text" stylesheets="@../fullpackstyling.css" text="Latest activity">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-   </left>
+   </center>
 </BorderPane>

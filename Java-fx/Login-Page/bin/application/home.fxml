@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle layoutX="328.0" layoutY="14.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle layoutX="106.0" layoutY="594.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle layoutX="940.0" layoutY="525.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Label layoutX="83.0" layoutY="91.0" opacity="0.5" styleClass="text" stylesheets="@../fullpackstyling.css" text="Library information">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="41.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Dashboard" textFill="#0091ff">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="-2.0" layoutY="134.0" prefWidth="1040.0">
+         <children>
+            <Pane prefHeight="170.0" prefWidth="170.0" style="-fx-border-color: #707070; -fx-border-radius: 30; -fx-border-width: 2;">
+               <children>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="17.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Members" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="128.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="153">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="33.0" layoutY="50.0" size="40" />
+               </children>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane prefHeight="170.0" prefWidth="170.0" style="-fx-border-color: #707070; -fx-border-radius: 30; -fx-border-width: 2;">
+               <children>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="17.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Daily Read" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="128.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="12">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="ADDRESS_BOOK" layoutX="31.0" layoutY="48.0" size="40" />
+               </children>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane prefHeight="170.0" prefWidth="170.0" style="-fx-border-color: #707070; -fx-border-radius: 30; -fx-border-width: 2;">
+               <children>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="17.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Total Book" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Icons525View glyphName="BOOKS" layoutX="27.0" layoutY="52.0" size="40" />
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="129.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="150">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Pane>
+         </children>
+      </HBox>
+      <Label layoutX="41.0" layoutY="347.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="History" textFill="#0091ff">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="397.0" opacity="0.5" styleClass="text" stylesheets="@../fullpackstyling.css" text="Latest activity">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

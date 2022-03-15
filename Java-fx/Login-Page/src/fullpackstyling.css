@@ -9,55 +9,25 @@
 .label{
     -fx-font-family: "Fredoka";
 }
-.button1
+.button1{
+    -fx-font-family:"Fredoka";
+    -fx-font-size : 19;
+}
+.button1:hover{
+    -fx-background-color : #3DD2E6;
+    -fx-font-family:"Fredoka";
+    -fx-background-color : linear-gradient(to top left, #B08BF6,#3DD2E6);
+    /* -fx-font-size : 19; */
+}
+.loginbtn
 {
     -fx-font-family: "Fredoka";
     -fx-font-size : 16;
     -fx-background-color : #000000;
-    /* -fx-background-radius :  12; */
 }
-/* .button1:hover
-{
-    -fx-background-color : #524A7B ;
-    -fx-background-radius :  30;
+.text{
+    -fx-font-family: "Fredoka";
 }
-.button1:pressed
-{
-    -fx-font-size : 14.5;
-    -fx-background-color : #2F2B43 ;
-    -fx-background-radius :  30;
-} */
-
-.button2
-{
-    -fx-background-color : #393351;
-    -fx-background-radius :  20;
-}
-.button2:hover
-{
-    -fx-background-color : #524A7B ;
-    -fx-background-radius :  20;
-}
-.button2:pressed
-{
-    -fx-background-color : #2F2B43 ;
-    -fx-background-radius :  20;
-}
-
-.button3
-{
-    -fx-background-color : #141124;
-    -fx-background-radius :  0 0 0 0;
-}
-.button3:hover
-{
-    -fx-background-color : #524A7B ;
-}
-.button3:pressed
-{
-    -fx-background-color : #2F2B43 ;
-}
-
 .button4
 {
     -fx-background-color :linear-gradient(to top left, #41951C, #D4CEE3);
