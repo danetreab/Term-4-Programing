@@ -1,16 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.categoryController">
    <children>
-      <Label layoutX="460.0" layoutY="325.0" text="Category">
+      <Circle layoutX="112.0" layoutY="658.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle layoutX="340.0" layoutY="106.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle layoutX="1026.0" layoutY="520.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Label layoutX="50.0" layoutY="39.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Category" textFill="#0091ff">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
+      <TableView layoutX="316.0" layoutY="89.0" prefHeight="556.0" prefWidth="690.0" stylesheets="@../fullpackstyling.css">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TextField layoutX="43.0" layoutY="173.0" prefHeight="45.0" prefWidth="240.0" promptText="Category name" styleClass="fillform" stylesheets="@../fullpackstyling.css">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="comb" layoutX="43.0" layoutY="247.0" onAction="#comboBoxupdate" prefHeight="45.0" prefWidth="240.0" promptText="Status" style="-fx-background-color: trasparent; -fx-border-width: 0 0 2px 0; -fx-border-color: #707070;" styleClass="text" stylesheets="@../fullpackstyling.css" />
+      <JFXButton layoutX="43.0" layoutY="360.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Add" textFill="#049c02">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="43.0" layoutY="420.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Update" textFill="#fdb001">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="43.0" layoutY="480.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Delete" textFill="#e81700">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>
