@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
         "Java-fx/Project",
-        "Coffee/src/application"
+        "Algorithm Lab 8/02"
     ],
     "sqltools.connections": [
         {

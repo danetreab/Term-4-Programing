@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+.wraper{
+    padding-top: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.up{
+    font-size: 30;
+    font-family: 'Fredoka', sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+.horn{
+    font-size: 30;
+    font-family: 'Fredoka', sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+.monitor{
+    font-size: 30;
+    font-family: 'Fredoka', sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+.button{
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+}
+.button a{
+    text-decoration: none;
+    background-color: #A85651;
+    padding: 7 15;
+    border-radius: 15px;
+    color: white;
+}
+.button a:hover{
+    background-color: white;
+    color: #A85651;
+}
+i{
+    background-color: #7B1898;
+    padding: 25;
+    border-radius: 100%;
+    color: white;
+}
