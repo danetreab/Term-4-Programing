@@ -18,6 +18,9 @@
     -fx-border-color : #707070;
 }
 .combo-box{
+    -fx-border-width : 0 0 2px 0;
+    -fx-border-color : #707070;
+    -fx-background-color : transparent;
     -fx-font-size: 19
 }
 .textfield{
