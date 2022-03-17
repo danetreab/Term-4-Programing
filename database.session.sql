@@ -82,4 +82,8 @@ CREATE TABLE lendbook(
 INSERT INTO member(name)
 VALUE("Jack-Ma");
 -- @BLOCK
-SELECT * FROM member;
+SELECT * FROM category;
+-- @BLOCK
+DESCRIBE category;
+-- @BLOCK
+DELETE FROM category WHERE id in(1S);
