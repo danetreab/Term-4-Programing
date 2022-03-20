@@ -82,8 +82,27 @@ CREATE TABLE lendbook(
 INSERT INTO member(name)
 VALUE("Jack-Ma");
 -- @BLOCK
-SELECT * FROM category;
+SELECT * FROM author;
 -- @BLOCK
 DESCRIBE category;
 -- @BLOCK
-DELETE FROM category WHERE id in(1S);
+DELETE FROM category WHERE id in(19);
+
+-- @BLOCK
+SHOW TABLES;
+-- @BLOCK
+SELECT * FROM author;
+-- @BLOCK
+insert into author (name,address,phone) VALUE("Stephen King","None","None"),("Dr.Seuss","None","None"),("Spider","New york","None"),("Leonado da vinci","None","None"),("Sophocles","None","None"),("J.K Rowling","None","None"),("J.D Salinger","India","None"),("Victor Hugo","Paris","None");
+
+-- @BLOCK
+insert into author(name,address,phone) VALUE("Patty McCord","None","None"),("Sophie jaff","Rome","None"),("Dr.Strang","Mcu","None"),("Petter Parker","New york","none"),("Elon musk","None","None");
+
+-- @BLOCK
+DESCRIBE book;
+-- @BLOCK
+insert into book(bookname,author,publisher,contents,pages,edition) VALUE("Holes","Patty McCord","None","None","100","1");
+-- @BLOCK
+select * from book;
+-- @BLOCK
+select Count(bookname) from book;
