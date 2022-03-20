@@ -5,7 +5,6 @@
 <?import de.jensd.fx.glyphs.icons525.Icons525View?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -24,55 +23,60 @@
          <children>
             <VBox layoutY="-33.0" prefHeight="720.0" prefWidth="240.0" style="-fx-background-color: #ECEDF6;">
                <children>
-                  <Pane prefHeight="70.0" prefWidth="240.0">
+                  <Pane prefWidth="240.0">
                      <children>
                         <JFXButton onMouseClicked="#home" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="Home" />
                         <FontAwesomeIconView glyphName="HOME" layoutX="43.0" layoutY="48.0" size="35" text="" />
                      </children>
                      <VBox.margin>
-                        <Insets top="70.0" />
+                        <Insets top="60.0" />
                      </VBox.margin>
                   </Pane>
-                  <Pane prefHeight="70.0" prefWidth="240.0">
+                  <Pane prefWidth="240.0">
                      <children>
                         <JFXButton onMouseClicked="#category" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="      Category" />
                         <FontAwesomeIconView glyphName="TH_LARGE" layoutX="44.0" layoutY="48.0" size="30" />
                      </children>
                   </Pane>
-                  <Pane prefHeight="70.0" prefWidth="240.0">
+                  <Pane prefWidth="240.0">
                      <children>
                         <JFXButton onMouseClicked="#author" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="  Author" />
                         <FontAwesomeIconView glyphName="PENCIL_SQUARE" layoutX="46.0" layoutY="48.0" size="34" />
                      </children>
                   </Pane>
-                  <Pane prefHeight="70.0" prefWidth="240.0">
+                  <Pane prefWidth="240.0">
                      <children>
                         <JFXButton onMouseClicked="#publisher" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="      Publisher" />
                         <FontAwesomeIconView glyphName="PRINT" layoutX="44.0" layoutY="48.0" size="35" />
                      </children>
                   </Pane>
-                  <Pane prefHeight="70.0" prefWidth="240.0">
+                  <Pane prefWidth="240.0">
                      <children>
                         <JFXButton onMouseClicked="#book" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="Book" />
                         <FontAwesomeIconView glyphName="BOOK" layoutX="45.0" layoutY="51.0" size="35" />
                      </children>
                   </Pane>
-                  <Pane prefHeight="70.0" prefWidth="240.0">
+                  <Pane prefWidth="240.0">
                      <children>
                         <JFXButton onMouseClicked="#member" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="      Member" />
                         <FontAwesomeIconView glyphName="USER_CIRCLE" layoutX="46.0" layoutY="49.0" size="30" text="" />
                      </children>
                   </Pane>
-                  <Pane prefHeight="70.0" prefWidth="240.0">
+                  <Pane prefWidth="240.0">
                      <children>
                         <JFXButton onMouseClicked="#issue" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="          Issue Book" />
                         <FontAwesomeIconView glyphName="BOOKMARK" layoutX="52.0" layoutY="48.0" size="30" />
                      </children>
                   </Pane>
-                  <Pane prefHeight="70.0" prefWidth="240.0">
+                  <Pane prefWidth="240.0">
                      <children>
                         <JFXButton onMouseClicked="#returnbtn" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="             Return Book" />
                         <FontAwesomeIconView glyphName="REPLY_ALL" layoutX="50.0" layoutY="48.0" size="30" />
+                     </children>
+                  </Pane>
+                  <Pane prefWidth="240.0">
+                     <children>
+                        <JFXButton layoutY="23.0" onMouseClicked="#logout" opacity="0.75" prefHeight="70.0" prefWidth="240.0" styleClass="button2" stylesheets="@../fullpackstyling.css" text="Log out" textFill="#ee5353" />
                      </children>
                   </Pane>
                </children>
@@ -197,12 +201,12 @@
                   </Pane>
                   <Pane prefHeight="170.0" prefWidth="170.0" style="-fx-border-color: #707070; -fx-border-radius: 30; -fx-border-width: 2;">
                      <children>
-                        <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="17.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Daily Read" textAlignment="CENTER">
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="17.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Author" textAlignment="CENTER">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" layoutX="1.0" layoutY="128.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="12">
+                        <Label fx:id="txtauthor" alignment="CENTER" layoutX="1.0" layoutY="128.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="12">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -221,7 +225,7 @@
                            </font>
                         </Label>
                         <Icons525View glyphName="BOOKS" layoutX="27.0" layoutY="52.0" size="40" />
-                        <Label alignment="CENTER" layoutX="1.0" layoutY="129.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="150">
+                        <Label fx:id="txttotalbook" alignment="CENTER" layoutX="1.0" layoutY="129.0" prefWidth="170.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="150">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -243,12 +247,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TableView layoutX="122.0" layoutY="465.0" prefHeight="222.0" prefWidth="797.0" stylesheets="@../fullpackstyling.css">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
-            </TableView>
+            <TableView layoutX="122.0" layoutY="465.0" prefHeight="222.0" prefWidth="797.0" stylesheets="@../fullpackstyling.css" />
          </children>
       </Pane>
    </center>

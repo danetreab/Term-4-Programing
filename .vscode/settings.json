@@ -1,7 +1,8 @@
 {
     "java.project.sourcePaths": [
         "Java-fx/Project",
-        "Algorithm Lab 8/02"
+        "Algorithm Lab 8/02",
+        "Banch Of Random Stuff"
     ],
     "sqltools.connections": [
         {
@@ -16,6 +17,19 @@
             "database": "sql6478070",
             "username": "sql6478070",
             "password": "xcvQ1LVh1q"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3308,
+            "driver": "MySQL",
+            "name": "Project",
+            "database": "project",
+            "username": "root",
+            "password": ""
         }
     ],
     "java.project.referencedLibraries": {

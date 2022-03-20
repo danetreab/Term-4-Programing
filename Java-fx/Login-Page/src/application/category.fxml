@@ -76,18 +76,18 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <ComboBox fx:id="txtstatus" layoutX="43.0" layoutY="247.0" onAction="#comboBoxupdate" prefHeight="45.0" prefWidth="240.0" promptText="Status" styleClass="combo-box" stylesheets="@../fullpackstyling.css">
+      <ComboBox fx:id="txtstatus" layoutX="43.0" layoutY="247.0" prefHeight="45.0" prefWidth="240.0" promptText="Status" styleClass="combo-box2" stylesheets="@../fullpackstyling.css">
          <opaqueInsets>
             <Insets />
          </opaqueInsets></ComboBox>
-      <TableView fx:id="categorytable" layoutX="316.0" layoutY="89.0" prefHeight="556.0" prefWidth="690.0" stylesheets="@../fullpackstyling.css">
+      <TableView fx:id="table" layoutX="316.0" layoutY="89.0" prefHeight="556.0" prefWidth="690.0" stylesheets="@../fullpackstyling.css">
         <columns>
-            <TableColumn prefWidth="162.0" text="ID" />
-          <TableColumn prefWidth="309.0" text="Category name" />
-          <TableColumn prefWidth="218.0" text="Status" />
+            <TableColumn fx:id="idcol" prefWidth="129.0" style="-fx-alignment: center;" text="ID" />
+          <TableColumn fx:id="categorynamecol" prefWidth="331.0" text="Category name" />
+          <TableColumn fx:id="statuscol" prefWidth="205.0" style="-fx-alignment: center;" text="Status" />
         </columns>
       </TableView>
-      <TextField fx:id="txtcategory" layoutX="43.0" layoutY="173.0" prefHeight="45.0" prefWidth="240.0" promptText="Category name" styleClass="fillform" stylesheets="@../fullpackstyling.css">
+      <TextField fx:id="txtcategory" layoutX="43.0" layoutY="173.0" onAction="#update" prefHeight="45.0" prefWidth="240.0" promptText="Category name" styleClass="fillform" stylesheets="@../fullpackstyling.css">
          <font>
             <Font size="19.0" />
          </font>
@@ -100,7 +100,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton layoutX="43.0" layoutY="420.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Update" textFill="#fdb001">
+      <JFXButton layoutX="43.0" layoutY="420.0" onAction="#update" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Update" textFill="#fdb001">
          <font>
             <Font size="15.0" />
          </font>
@@ -108,7 +108,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton layoutX="43.0" layoutY="480.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Delete" textFill="#e81700">
+      <JFXButton layoutX="43.0" layoutY="480.0" onAction="#delete" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Delete" textFill="#e81700">
          <font>
             <Font size="15.0" />
          </font>

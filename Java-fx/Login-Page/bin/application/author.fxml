@@ -1,15 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.authorController">
    <children>
-      <Label layoutX="474.0" layoutY="325.0" text="Author">
+      <Circle layoutX="1016.0" layoutY="310.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle layoutX="200.0" layoutY="680.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Circle layoutX="502.0" layoutY="106.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.239215686917305" green="0.8235294222831726" blue="0.9019607901573181" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6901960968971252" green="0.545098066329956" blue="0.9647058844566345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Label layoutX="50.0" layoutY="39.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Author" textFill="#0091ff">
          <font>
             <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtname" layoutX="50.0" layoutY="130.0" prefHeight="45.0" prefWidth="240.0" promptText="Name" styleClass="fillform" stylesheets="@../fullpackstyling.css">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtaddress" layoutX="50.0" layoutY="200.0" prefHeight="45.0" prefWidth="240.0" promptText="Address" styleClass="fillform" stylesheets="@../fullpackstyling.css">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtphone" layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="240.0" promptText="Phone" styleClass="fillform" stylesheets="@../fullpackstyling.css">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="50.0" layoutY="375.0" onAction="#add" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Add" textFill="#049c02">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="50.0" layoutY="440.0" onAction="#update" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Update" textFill="#fdb001">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="50.0" layoutY="505.0" onAction="#delete" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Delete" textFill="#e81700">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="table" layoutX="326.0" layoutY="99.0" prefHeight="556.0" prefWidth="690.0" stylesheets="@../fullpackstyling.css">
+         <columns>
+            <TableColumn fx:id="idcol" prefWidth="82.0" style="-fx-alignment: center;" text="ID" />
+            <TableColumn fx:id="namecol" prefWidth="220.0" text="Name" />
+            <TableColumn fx:id="addresscol" prefWidth="194.0" text="Address" />
+            <TableColumn fx:id="phonecol" prefWidth="170.0" style="-fx-alignment: center;" text="Phone" />
+         </columns>
+      </TableView>
+      <Label fx:id="txtlabel" alignment="CENTER" layoutX="-2.0" layoutY="337.0" opacity="0.75" prefHeight="21.0" prefWidth="337.0" styleClass="text" stylesheets="@../fullpackstyling.css">
+         <font>
+            <Font size="15.0" />
          </font>
       </Label>
    </children>

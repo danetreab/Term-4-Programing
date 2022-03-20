@@ -3,7 +3,6 @@ package application;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,6 +20,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+
 
 public class LoginController extends SHA256{
     private static final Stage Stage = null;
@@ -43,20 +43,15 @@ public class LoginController extends SHA256{
             message.setText("Email or Password Blank");
         }
         else{
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con=DriverManager.getConnection("jdbc:mysql://sql6.freemysqlhosting.net/sql6478070","sql6478070","xcvQ1LVh1q");
-                pst=con.prepareStatement("select * from usercredential where username=? and password=?");
-                pst.setString(1,mail);
-                pst.setString(2,password);
-                rs = pst.executeQuery();
-                if(rs.next()){
-                    changescene(event);
-                }else{
-                    message.setText("Login Fail");
-                }
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
+            con = DbConnect.getConnect();
+            pst=con.prepareStatement("select * from usercredential where username=? and password=?");
+            pst.setString(1,mail);
+            pst.setString(2,password);
+            rs = pst.executeQuery();
+            if(rs.next()){
+                changescene(event);
+            }else{
+                message.setText("Login Fail");
             }
         }
     }

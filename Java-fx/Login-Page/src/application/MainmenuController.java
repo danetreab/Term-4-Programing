@@ -1,21 +1,37 @@
 package application;
 import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.scene.Node;
 
-public class MainmenuController{
+public class MainmenuController implements Initializable{
     @FXML BorderPane scenepanel;
     @FXML Circle min;
     @FXML Pane ap;
+    @FXML private Label txttotalbook;
+    @FXML private Label txtauthor;
     private Stage stage;
+    private Scene scene;
+    PreparedStatement pst;
+    Connection con;
+    ResultSet rs;
+    
     @FXML
     private void exit(MouseEvent event){
         stage = (Stage)scenepanel.getScene().getWindow();
@@ -74,5 +90,48 @@ public class MainmenuController{
             }
         scenepanel.setCenter(root);
     }
-
+    @FXML
+    private void logout(MouseEvent event) throws IOException{
+        Parent root=FXMLLoader.load(getClass().getResource("Login.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.show();
+    }
+    public void totalbook(){
+        String total="";
+        con = DbConnect.getConnect();
+        try {
+            pst = con.prepareStatement("select count(bookname) from book");
+            rs = pst.executeQuery();
+            if(rs.next()){
+                total=rs.getString("count(bookname)");
+                txttotalbook.setText(total);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+    }
+    public void totalauthor(){
+        String total="";
+        con = DbConnect.getConnect();
+        try {
+            pst = con.prepareStatement("select count(name) from author");
+            rs = pst.executeQuery();
+            if(rs.next()){
+                total=rs.getString("count(name)");
+                txtauthor.setText(total);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+    }
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        totalbook();
+        totalauthor();
+    }
 }

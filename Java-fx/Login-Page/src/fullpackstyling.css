@@ -17,7 +17,7 @@
     -fx-font-size:19;
     -fx-border-color : #707070;
 }
-.combo-box{
+.combo-box2{
     -fx-border-width : 0 0 2px 0;
     -fx-border-color : #707070;
     -fx-background-color : transparent;
@@ -37,8 +37,16 @@
 .button1:hover{
     -fx-background-color : #3DD2E6;
     -fx-font-family:"Fredoka";
-    -fx-background-color : linear-gradient(to top left, #B08BF6,#3DD2E6);
+    -fx-background-color : linear-gradient(to top left, #b08bf677,#3dd2e683);
     /* -fx-font-size : 19; */
+}
+.button2{
+    -fx-font-family:"Fredoka";
+    -fx-font-size : 19;
+}
+.button2:hover{
+    -fx-background-color:#cecccc;
+    -fx-fill : black;
 }
 .loginbtn
 {
@@ -64,7 +72,34 @@
     -fx-background-color :linear-gradient(to top left, #41951C, #D4CEE3);
     -fx-background-radius :  30 30 30 30;
 }
+.combo-box1{
+    -fx-text-fill : white;
+    -fx-font-family: "Fredoka";
+    -fx-font-size:19;
+}
+.combo-box1 .list-view{
+    -fx-background-color:white;
+    -fx-font-family: "Fredoka";
+    -fx-font-size: 15;
+}
+.combo-box1 .scroll-bar:horizontal .thumb,
+.combo-box1 .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #2D75E8,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
 
+}
+.combo-box1 .scroll-bar:vertical .track,
+.combo-box1 .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	-fx-border-color:derive(  #2D75E8,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+.combo-box1 .increment-button ,.combo-box1 .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+}
 /* .table-view .column-header,
 .table-view .column-header-background .filler {
     -fx-cell-size : 20;
@@ -156,4 +191,7 @@
 .linear-grad
 {
     -fx-background-color: linear-gradient(to bottom left, #A868A0, #2D75E8);
+}
+.columcenter{
+    -fx-text-alignment : center;
 }
