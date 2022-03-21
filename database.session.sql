@@ -103,6 +103,10 @@ DESCRIBE book;
 -- @BLOCK
 insert into book(bookname,author,publisher,contents,pages,edition) VALUE("Holes","Patty McCord","None","None","100","1");
 -- @BLOCK
-select * from book;
+select * from member;
 -- @BLOCK
 select Count(bookname) from book;
+-- @BLOCK
+DESCRIBE member;
+-- @BLOCK
+INSERT INTO member (name,address,phone) VALUE ("Vanna","Phnom Penh","None"),("Phirun","Siem Reap","None"),("Botum","Koh Kong","None"),("Sovanna","Pres Vihair","None"),("Bruno Jack","Kom Pot","None"),("Santeri","Sihanuk","045623"),("Wynonna","New york","054231"),("Davidu","India","98042"),("Katie","MCU","20453"),("Gunvor","Vietnam","305423"),("Jack ma","Jakata","+4523185"),("Tom","Catoon network","00000"),("Jerry","Home","123212");

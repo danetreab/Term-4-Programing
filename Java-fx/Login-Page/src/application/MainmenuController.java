@@ -26,6 +26,7 @@ public class MainmenuController implements Initializable{
     @FXML Pane ap;
     @FXML private Label txttotalbook;
     @FXML private Label txtauthor;
+    @FXML private Label txtmember;
     private Stage stage;
     private Scene scene;
     PreparedStatement pst;
@@ -129,9 +130,25 @@ public class MainmenuController implements Initializable{
         }
         
     }
+    public void totalmember(){
+        String total="";
+        con = DbConnect.getConnect();
+        try {
+            pst = con.prepareStatement("select count(id) from member");
+            rs = pst.executeQuery();
+            if(rs.next()){
+                total=rs.getString("count(id)");
+                txtmember.setText(total);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+    }
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         totalbook();
         totalauthor();
+        totalmember();
     }
 }
