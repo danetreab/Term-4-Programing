@@ -12,8 +12,6 @@ import java.util.Set;
 
 import com.jfoenix.controls.JFXComboBox;
 
-import org.controlsfx.control.textfield.AutoCompletionBinding;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
