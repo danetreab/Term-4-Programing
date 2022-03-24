@@ -13,11 +13,11 @@ import java.util.logging.Logger;
 
 public class DbConnect {
     
-    private static String HOST = "sql6.freemysqlhosting.net";
-        private static int PORT = 3306;
-        private static String DB_NAME = "sql6478070";
-        private static String USERNAME = "sql6478070";
-        private static String PASSWORD = "xcvQ1LVh1q";
+    private static String HOST = "localhost";
+        private static int PORT = 3308;
+        private static String DB_NAME = "project-oop";
+        private static String USERNAME = "root";
+        private static String PASSWORD = "";
         private static Connection connection ;
         
         

@@ -6,14 +6,14 @@ import javafx.beans.property.SimpleStringProperty;
  *
  * @author hocin
  */
-public class authorTable {
+public class memberTable {
     private SimpleStringProperty id;
     private SimpleStringProperty name;
     private SimpleStringProperty address;
     private SimpleStringProperty phone;
     
     // String id,categoryname,status;
-    public authorTable(String id, String name,String address,String phone) {
+    public memberTable(String id, String name,String address,String phone) {
         this.id = new SimpleStringProperty(id);
         this.name = new SimpleStringProperty(name);
         this.address = new SimpleStringProperty(address);

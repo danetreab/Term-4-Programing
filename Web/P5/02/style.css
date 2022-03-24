@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 10 30px 10 30px; */
+    background-color: white;
+    padding: 10px 30px 10px 30px;
+}
+.nav ul li,.nav ul li a{
+    display: inline-block;
+    margin: 0 25;
+    text-decoration: none;
+    color: #555;
+}
+.title{
+    background-image: url("https://cambodiaictawards.com/img/bg_11.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.text{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.text h3{
+    font-size: 40;
+}
+.text p{
+    font-size: 19;
+}
+.text a{
+    text-decoration: none;
+    color: white;
+    background-color: #008000;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+.readme{
+    margin-top: 45px;
+}
+.video{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+.video p{
+    font-size: 20px;
+}
+.video a{
+    margin-left: 35px;
+    background-image: linear-gradient(325deg, #5b467e 0, #3365a7 50%, #47cca6 100%);
+    /* border-image: linear-gradient(325deg, #5b467e 0, #3365a7 50%, #47cca6 100%); */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.award{
+    display: inline-block;
+    background-color: #F9F6F6;
+    /* margin-bottom: 20px; */
+}
+.awardtitle{
+    text-align: center;
+    padding: 30px;
+}
+.awardtitle h3{
+    font-size: 40px;
+    padding: 15px;
+}
+.awardtitle p{
+    margin-top: 25px;
+    font-size: 22px;
+}
+.awardlist{
+    display: grid;
+    row-gap: 30px;
+    column-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 20% 0 20%;
+}
+.awardhead{
+    color: #404040;
+}
+.awardec{
+    color: #888a8b;
+}
+.services-icon{
+    position: relative;
+    /* display: inline-block; */
+    background-color: #e0e0e275;
+    padding: 15px;
+    
+}
+.grid{
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    background-color: white;
+}
+.awardhead{
+    padding: 25px;
+    font-size: 22px;
+}
+.awardec{
+    padding: 25px;
+    font-size: 20px;
+}
+
+.shape-1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.shape{
+    position: relative;
+}
+.judetitle{
+    /* margin-top: 40px; */
+    padding: 40px 0 30px 0;
+    text-align: center;
+}
+.judetitle p{
+    padding-top: 10px;
+    font-size: 25;
+    color: #888a8b;
+}
+.judetitle h3{
+    font-size: 35;
+}
+.judge{
+    background-color: #F9F6F6;
+}
+.space{
+    /* margin-bottom: 30px; */
+    background: #F9F6F6;
+}
+.judgelist{
+    margin: 30px 18% 0 18%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 40px;
+    column-gap: 20px;
+}
+.photo img{
+    padding: 10px;
+    width: 110px;
+    border-radius: 50%;
+}
+.photo{
+    background: radial-gradient(circle, rgba(0,20,65,1) 20%, rgba(0,15,30,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+.gridlist{
+    background-color:  white;
+    text-align: center;
+}
+.gridlist h5{
+    margin-top: 15px;
+    font-size: 20;
+}
+.gridlist p{
+    color: #888a8b;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    padding: 0 17px 0 17px;
+}
+.qna h2{
+    font-size: 40;
+    color: #404040;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.question{
+    padding: 20px;
+    font-size: 22;
+    margin-left: 30%;
+    margin-right: 20%;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+}
+.sponser{
+    margin: 0 20% 0 20%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+.gridspp img{
+    width: 30%;
+    margin: 10px;
+}
+.spp{
+    color: #545454;
+    margin-top: 140px;
+    padding: 20px;
+    font-size: 20;
+}

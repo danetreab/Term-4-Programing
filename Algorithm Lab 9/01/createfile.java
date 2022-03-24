@@ -15,10 +15,7 @@ public class createfile{
                     
                 }while(!name.equals("stop"));
                 p.close();
-                // p.write("Hello");
-                // p.close();
             } catch (IOException e1) {
-                // TODO Auto-generated catch block
                 e1.printStackTrace();
             }
     }

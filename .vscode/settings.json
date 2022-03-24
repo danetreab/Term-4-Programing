@@ -30,6 +30,19 @@
             "database": "project",
             "username": "root",
             "password": ""
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3308,
+            "driver": "MySQL",
+            "name": "3/24",
+            "database": "3/24",
+            "username": "root",
+            "password": ""
         }
     ],
     "java.project.referencedLibraries": {
