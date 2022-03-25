@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" stylesheets="@../fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Circle layoutX="383.0" layoutY="198.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
          <fill>
@@ -68,53 +68,37 @@
             </LinearGradient>
          </fill>
       </Circle>
-      <TextField layoutX="50.0" layoutY="100.0" prefHeight="45.0" prefWidth="240.0" promptText="Member ID">
+      <TextField layoutX="50.0" layoutY="100.0" prefHeight="45.0" prefWidth="240.0" promptText="Member ID" styleClass="fillform">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <TextField layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="240.0" promptText="Return Date">
+      <TextField layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="240.0" promptText="Return Date" styleClass="fillform">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <TextField layoutX="50.0" layoutY="340.0" prefHeight="45.0" prefWidth="240.0" promptText="Day Elapsed">
+      <TextField layoutX="50.0" layoutY="340.0" prefHeight="45.0" prefWidth="240.0" promptText="Day Elapsed" styleClass="fillform">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <Button layoutX="50.0" layoutY="480.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0" text="Add">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="50.0" layoutY="545.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0" text="Update">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="50.0" layoutY="610.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0" text="Delete">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
       <TableView layoutX="334.0" layoutY="61.0" prefHeight="556.0" prefWidth="690.0">
          <columns>
             <TableColumn prefWidth="75.0" text="ID" />
-            <TableColumn prefWidth="97.0" text="Member ID" />
-            <TableColumn prefWidth="115.0" text="Member Name" />
-            <TableColumn prefWidth="67.0" text="Book" />
-            <TableColumn prefWidth="140.0" text="Return Date" />
-            <TableColumn prefWidth="113.0" text="Days Elip" />
-            <TableColumn prefWidth="82.0" text="Fine" />
+            <TableColumn prefWidth="149.0" text="Member Name" />
+            <TableColumn prefWidth="90.0" text="Book" />
+            <TableColumn prefWidth="138.0" text="Return Date" />
+            <TableColumn prefWidth="104.0" text="Days Elip" />
+            <TableColumn prefWidth="98.0" text="Fine" />
          </columns>
       </TableView>
-      <Label layoutX="50.0" layoutY="39.0" text="Return Book">
+      <Label layoutX="50.0" layoutY="39.0" text="Return Book" textFill="#0091ff">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField layoutX="50.0" layoutY="410.0" prefHeight="45.0" prefWidth="240.0" promptText="Fine">
+      <TextField layoutX="50.0" layoutY="410.0" prefHeight="45.0" prefWidth="240.0" promptText="Fine" styleClass="fillform">
          <font>
             <Font size="19.0" />
          </font>
@@ -139,5 +123,12 @@
             <Font size="19.0" />
          </font>
       </Label>
+      <JFXButton layoutX="50.0" layoutY="480.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="50.0" layoutY="545.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" />
+      <JFXButton layoutX="50.0" layoutY="610.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" />
    </children>
 </AnchorPane>

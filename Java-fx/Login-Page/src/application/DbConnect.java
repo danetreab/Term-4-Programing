@@ -27,12 +27,6 @@ public class DbConnect {
         } catch (SQLException ex) {
             Logger.getLogger(DbConnect.class.getName()).log(Level.SEVERE, null, ex);
         }
-            
             return  connection;
         }
-        
-        
-        
-
-    
 }

@@ -36,9 +36,18 @@ public class bookController implements Initializable{
             e.printStackTrace();
         }
     }
+    public void author(){
+
+    }
+    public void publisher(){
+
+    }
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         category();
+        author();
+        publisher();
+
     }
 
 }
