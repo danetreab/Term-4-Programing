@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -129,7 +130,13 @@ public class categoryController implements Initializable  {
         txtstatus.setItems(list);
         load();
     }
+    public void removeAllRows(){
+        for ( int i = 0; i<table.getItems().size(); i++) {
+            table.getItems().clear(); 
+        } 
+    }
     private void load(){
+        removeAllRows();
         con=DbConnect.getConnect();
             try {
                 rs=con.createStatement().executeQuery("select * from category");
@@ -147,5 +154,18 @@ public class categoryController implements Initializable  {
         categorynamecol.setCellValueFactory(new PropertyValueFactory<>("categoryname"));
         statuscol.setCellValueFactory(new PropertyValueFactory<>("status"));
         table.setItems(categories);
+
+        table.setItems(categories);
+        table.setRowFactory(tv -> {
+            TableRow<categoryTable> myRow = new TableRow<>();
+            myRow.setOnMouseClicked(event ->
+            {
+                if (event.getClickCount() == 1 && (!myRow.isEmpty())) {
+                    int myIndex = table.getSelectionModel().getSelectedIndex();
+                    txtcategory.setText(table.getItems().get(myIndex).getcategoryname());
+                }
+            });
+            return myRow;
+        });
     }
 }

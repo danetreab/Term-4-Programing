@@ -16,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -129,7 +130,13 @@ public class authorController implements Initializable{
             }
         }
     }
+    public void removeAllRows(){
+        for ( int i = 0; i<table.getItems().size(); i++) {
+            table.getItems().clear(); 
+        } 
+    }
     public void load(){
+        removeAllRows();
         con=DbConnect.getConnect();
         try {
             rs=con.createStatement().executeQuery("select * from author");
@@ -148,7 +155,21 @@ public class authorController implements Initializable{
         namecol.setCellValueFactory(new PropertyValueFactory<>("name"));
         addresscol.setCellValueFactory(new PropertyValueFactory<>("address"));
         phonecol.setCellValueFactory(new PropertyValueFactory<>("phone"));
+        
         table.setItems(list);
+        table.setRowFactory(tv -> {
+            TableRow<authorTable> myRow = new TableRow<>();
+            myRow.setOnMouseClicked(event ->
+            {
+                if (event.getClickCount() == 1 && (!myRow.isEmpty())) {
+                    int myIndex = table.getSelectionModel().getSelectedIndex();
+                    txtname.setText(table.getItems().get(myIndex).getcategoryname());
+                    txtaddress.setText(table.getItems().get(myIndex).getstatus());
+                    txtphone.setText(table.getItems().get(myIndex).getPhone());
+                }
+            });
+            return myRow;
+        });
     }
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

@@ -90,7 +90,7 @@
             <TableColumn prefWidth="90.0" text="Book" />
             <TableColumn prefWidth="138.0" text="Return Date" />
             <TableColumn prefWidth="104.0" text="Days Elip" />
-            <TableColumn prefWidth="98.0" text="Fine" />
+            <TableColumn prefWidth="112.0" text="Fine" />
          </columns>
       </TableView>
       <Label layoutX="50.0" layoutY="39.0" text="Return Book" textFill="#0091ff">
