@@ -78,10 +78,10 @@
       </Circle>
       <TableView fx:id="table" layoutX="326.0" layoutY="99.0" prefHeight="556.0" prefWidth="690.0" stylesheets="@../fullpackstyling.css">
          <columns>
-            <TableColumn fx:id="idcol" prefWidth="86.0" text="ID" />
+            <TableColumn fx:id="idcol" prefWidth="86.0" style="-fx-alignment: center;" text="ID" />
             <TableColumn fx:id="namecol" minWidth="9.0" prefWidth="217.0" text="Name" />
             <TableColumn fx:id="addresscol" prefWidth="196.0" text="Address" />
-            <TableColumn fx:id="phonecol" prefWidth="168.0" text="Contact" />
+            <TableColumn fx:id="phonecol" prefWidth="168.0" style="-fx-alignment: center;" text="Contact" />
          </columns>
       </TableView>
       <JFXButton layoutX="50.0" layoutY="375.0" onAction="#onadd" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Add" textFill="#049c02" />

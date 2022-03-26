@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 *{
+    font-family: 'Ubuntu', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -17,9 +19,17 @@
     color: #555;
 }
 .title{
-    background-image: url("https://cambodiaictawards.com/img/bg_11.jpg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    margin-left: -15px;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2); 
+    object-fit: cover;
 }
 .text{
     display: inline-block;
@@ -46,6 +56,7 @@
     margin-top: 45px;
 }
 .video{
+    background-color: white;
     display: flex;
     justify-content: center;
     padding: 25px;
@@ -90,7 +101,11 @@
 .awardhead{
     color: #404040;
 }
+.awardhead p{
+    font-size: 25;
+}
 .awardec{
+    font-size: 19;
     color: #888a8b;
 }
 .services-icon{
@@ -108,11 +123,10 @@
 }
 .awardhead{
     padding: 25px;
-    font-size: 22px;
+    font-size: 20px;
 }
 .awardec{
     padding: 25px;
-    font-size: 20px;
 }
 
 .shape-1{
@@ -185,7 +199,7 @@
 }
 .question{
     padding: 20px;
-    font-size: 22;
+    font-size: 20;
     margin-left: 30%;
     margin-right: 20%;
     border-top: 1px solid #e3e3e3;
@@ -205,4 +219,10 @@
     margin-top: 140px;
     padding: 20px;
     font-size: 20;
+}
+.wraper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
 }
