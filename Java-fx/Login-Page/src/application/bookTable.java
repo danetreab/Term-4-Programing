@@ -9,13 +9,14 @@ import javafx.beans.property.SimpleStringProperty;
 public class bookTable {
     private SimpleStringProperty id;
     private SimpleStringProperty bookname;
+    private SimpleStringProperty category;
     private SimpleStringProperty author;
     private SimpleStringProperty publisher;
     private SimpleStringProperty contents;
     private SimpleStringProperty pages;
     private SimpleStringProperty edition;
     
-    public bookTable(String id, String bookname,String author,String publisher,String contents,String pages,String edition) {
+    public bookTable(String id, String bookname,String category,String author,String publisher,String contents,String pages,String edition) {
         this.id = new SimpleStringProperty(id);
         this.bookname = new SimpleStringProperty(bookname);
         this.author = new SimpleStringProperty(author);
@@ -23,6 +24,12 @@ public class bookTable {
         this.contents = new SimpleStringProperty(contents);
         this.pages = new SimpleStringProperty(pages);
         this.edition = new SimpleStringProperty(edition);
+    }
+    public String getcategory() {
+        return category.get();
+    }
+    public void setcategory(String category) {
+        this.category = new SimpleStringProperty(category);
     }
     public String getId() {
         return id.get();
@@ -68,6 +75,7 @@ public class bookTable {
     }
     public SimpleStringProperty idProperty(){return id;}
     public SimpleStringProperty booknameProperty(){return bookname;}
+    public SimpleStringProperty categoryProperty(){return category;}
     public SimpleStringProperty authorProperty(){return author;}
     public SimpleStringProperty publisherProperty(){return publisher;}
     public SimpleStringProperty contentsProperty(){return contents;}

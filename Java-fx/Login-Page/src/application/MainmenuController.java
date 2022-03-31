@@ -50,7 +50,7 @@ public class MainmenuController implements Initializable{
 
     @FXML
     void book(MouseEvent event) {
-        loader("book");
+        loader("Book");
     }
 
     @FXML
