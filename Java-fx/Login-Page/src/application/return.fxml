@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" stylesheets="@../fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.returnController">
    <children>
       <Circle layoutX="383.0" layoutY="198.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
          <fill>
@@ -68,67 +68,79 @@
             </LinearGradient>
          </fill>
       </Circle>
-      <TextField layoutX="50.0" layoutY="100.0" prefHeight="45.0" prefWidth="240.0" promptText="Member ID" styleClass="fillform">
+      <TextField fx:id="txtmemberid" layoutX="50.0" layoutY="100.0" onKeyPressed="#txtmemberidKeyPressed" prefHeight="45.0" prefWidth="240.0" promptText="Member ID" styleClass="fillform" stylesheets="@../fullpackstyling.css">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <TextField layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="240.0" promptText="Return Date" styleClass="fillform">
+      <TextField fx:id="txtDayElip" layoutX="50.0" layoutY="310.0" prefHeight="45.0" prefWidth="240.0" promptText="Day Elapsed" styleClass="fillform" stylesheets="@../fullpackstyling.css">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <TextField layoutX="50.0" layoutY="340.0" prefHeight="45.0" prefWidth="240.0" promptText="Day Elapsed" styleClass="fillform">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </TextField>
-      <TableView layoutX="334.0" layoutY="61.0" prefHeight="556.0" prefWidth="690.0">
+      <TableView fx:id="table" layoutX="326.0" layoutY="99.0" prefHeight="556.0" prefWidth="690.0" stylesheets="@../fullpackstyling.css">
          <columns>
-            <TableColumn prefWidth="75.0" text="ID" />
-            <TableColumn prefWidth="149.0" text="Member Name" />
-            <TableColumn prefWidth="90.0" text="Book" />
-            <TableColumn prefWidth="138.0" text="Return Date" />
-            <TableColumn prefWidth="104.0" text="Days Elip" />
-            <TableColumn prefWidth="112.0" text="Fine" />
+            <TableColumn id="idcol" fx:id="idcol" prefWidth="55.0" style="-fx-alignment: center;" text="ID" />
+            <TableColumn fx:id="midcol" prefWidth="56.0" style="-fx-alignment: center;" text="MID" />
+            <TableColumn fx:id="mnamecol" prefWidth="134.0" text="MName" />
+            <TableColumn fx:id="bnamecol" prefWidth="128.0" text="Book" />
+            <TableColumn fx:id="returnDatecol" prefWidth="139.0" style="-fx-alignment: center;" text="Return Date" />
+            <TableColumn fx:id="daysElipcol" prefWidth="95.0" style="-fx-alignment: center;" text="Days Elip" />
+            <TableColumn fx:id="finecol" prefWidth="60.0" style="-fx-alignment: center;" text="Fine" />
          </columns>
       </TableView>
-      <Label layoutX="50.0" layoutY="39.0" text="Return Book" textFill="#0091ff">
+      <Label layoutX="50.0" layoutY="39.0" stylesheets="@../fullpackstyling.css" text="Return Book" textFill="#0091ff">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField layoutX="50.0" layoutY="410.0" prefHeight="45.0" prefWidth="240.0" promptText="Fine" styleClass="fillform">
+      <TextField fx:id="txtFine" layoutX="50.0" layoutY="380.0" prefHeight="45.0" prefWidth="240.0" promptText="Fine" styleClass="fillform" stylesheets="@../fullpackstyling.css">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <Label layoutX="50.0" layoutY="170.0" text="Name">
+      <Label fx:id="lbName" layoutX="50.0" layoutY="170.0" stylesheets="@../fullpackstyling.css" text="Name">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="50.0" layoutY="220.0" text="Book">
+      <Label fx:id="txtName" layoutX="165.0" layoutY="170.0" stylesheets="@../fullpackstyling.css" text="Member Name">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="170.0" text="Member Name">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="120.0" layoutY="220.0" text="Book Name">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <JFXButton layoutX="50.0" layoutY="480.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn">
+      <JFXButton fx:id="btnAdd" layoutX="50.0" layoutY="480.0" onAction="#add" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Add" textFill="#049c02">
          <font>
             <Font size="19.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="50.0" layoutY="545.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" />
-      <JFXButton layoutX="50.0" layoutY="610.0" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" />
+      <JFXButton fx:id="btnUpdate" layoutX="50.0" layoutY="545.0" onAction="#update" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Update" textFill="#fdb001" />
+      <JFXButton fx:id="btnDelete" layoutX="50.0" layoutY="610.0" onAction="#delete" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Delete" textFill="#e81700" />
+      <Label layoutX="22.0" layoutY="435.0" prefHeight="17.0" prefWidth="286.0" textAlignment="CENTER" />
+      <Label fx:id="txtlabel" alignment="CENTER" layoutX="-1.0" layoutY="433.0" opacity="0.75" prefHeight="21.0" prefWidth="337.0" styleClass="text" stylesheets="@../fullpackstyling.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbBook" layoutX="50.0" layoutY="222.0" stylesheets="@../fullpackstyling.css" text="Book">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtBookName" layoutX="165.0" layoutY="222.0" stylesheets="@../fullpackstyling.css" text="Book Name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbReturnDate" layoutX="50.0" layoutY="270.0" stylesheets="@../fullpackstyling.css" text="Return Date">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtReturnDate" layoutX="165.0" layoutY="270.0" stylesheets="@../fullpackstyling.css" text="Date">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

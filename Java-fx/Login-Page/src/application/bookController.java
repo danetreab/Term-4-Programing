@@ -21,7 +21,9 @@ public class bookController implements Initializable{
     Connection con;
     ResultSet rs;
 
+    @FXML private JFXComboBox<String> txtauthor;
     @FXML private JFXComboBox<String> txtcategory;
+    @FXML private JFXComboBox<String> txtpublisher;
     public void category(){
         con= DbConnect.getConnect();
         ObservableList<String> list = FXCollections.observableArrayList();
@@ -37,17 +39,38 @@ public class bookController implements Initializable{
         }
     }
     public void author(){
-
+        con= DbConnect.getConnect();
+        ObservableList<String> list = FXCollections.observableArrayList();
+        try {
+            pst = con.prepareStatement("select name from author");
+            rs = pst.executeQuery();
+            while(rs.next()){
+                list.add(rs.getString("name"));
+            }
+            txtauthor.setItems(list);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     public void publisher(){
-
+        con= DbConnect.getConnect();
+        ObservableList<String> list = FXCollections.observableArrayList();
+        try {
+            pst = con.prepareStatement("select name from publisher");
+            rs = pst.executeQuery();
+            while(rs.next()){
+                list.add(rs.getString("name"));
+            }
+            txtpublisher.setItems(list);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         category();
         author();
         publisher();
-
     }
 
 }

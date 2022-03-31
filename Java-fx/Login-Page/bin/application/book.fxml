@@ -11,6 +11,8 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets></JFXComboBox>
-      <TextField fx:id="autotxt" layoutX="54.0" layoutY="151.0" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <TextField fx:id="autotxt" layoutX="50.0" layoutY="130.0" prefHeight="45.0" prefWidth="240.0" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <JFXComboBox fx:id="txtauthor" layoutX="54.0" layoutY="304.0" prefHeight="35.0" prefWidth="262.0" promptText="Author" styleClass="combo-box1" stylesheets="@../fullpackstyling.css" />
+      <JFXComboBox fx:id="txtpublisher" layoutX="54.0" layoutY="361.0" prefHeight="45.0" prefWidth="262.0" promptText="Publisher" styleClass="combo-box1" stylesheets="@../fullpackstyling.css" />
    </children>
 </AnchorPane>
