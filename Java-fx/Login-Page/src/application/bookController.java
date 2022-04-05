@@ -46,7 +46,7 @@ public class bookController implements Initializable{
     @FXML private TextField txtedition;
     @FXML private TextField txtname;
     @FXML private TextField txtpage;
-
+    @FXML private Label txtlabel;
 
     ObservableList<bookTable> list = FXCollections.observableArrayList();
     
@@ -92,6 +92,122 @@ public class bookController implements Initializable{
             e.printStackTrace();
         }
     }
+    public void add(ActionEvent event) {
+        String name, category, publisher, author,content,page,edition;
+       // Connect();
+        name = txtname.getText();
+        category = txtcategory.getSelectionModel().getSelectedItem().toString();
+        publisher= txtpublisher.getSelectionModel().getSelectedItem().toString();
+        author = txtauthor.getSelectionModel().getSelectedItem().toString();
+        content = txtcontent.getText();
+        page = txtpage.getText();
+        edition = txtedition.getText();
+
+        con = DbConnect.getConnect();
+            try {
+                    pst = con.prepareStatement("insert into book(bookname,category,author,publisher,contents,pages,edition) value (?,?,?,?,?,?,?)");
+                    pst.setString(1, name);
+                    pst.setString(2, category);
+                    pst.setString(3, author);
+                    pst.setString(4, publisher);
+                    pst.setString(5, content);
+                    pst.setString(6, page);
+                    pst.setString(7, edition);
+
+                    pst.executeUpdate();
+
+                    txtname.setText("");
+                    txtcategory.getSelectionModel().clearSelection();
+                    txtpublisher.getSelectionModel().clearSelection();
+                    txtauthor.getSelectionModel().clearSelection();
+                    txtcontent.setText("");
+                    txtpage.setText("");
+                    txtedition.setText("");
+                    txtname.requestFocus();
+                    load();
+            } catch (SQLException ex) {
+                    Logger.getLogger(bookController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }
+    public void update(ActionEvent event){
+        String name, category, publisher, author,content,page,edition;
+        if(table.getSelectionModel().getSelectedIndex()==-1){
+            txtlabel.setText("Item not select");
+        }
+        else{
+            int myIndex = table.getSelectionModel().getSelectedIndex();
+            int id=Integer.parseInt(String.valueOf(table.getItems().get(myIndex).getId()));
+                name = txtname.getText();
+                category = txtcategory.getSelectionModel().getSelectedItem().toString();
+                publisher= txtpublisher.getSelectionModel().getSelectedItem().toString();
+                author = txtauthor.getSelectionModel().getSelectedItem().toString();
+                content = txtcontent.getText();
+                page = txtpage.getText();
+                edition = txtedition.getText();
+            if(name.equals("")&&content.equals("")&&page.equals("")){
+                txtlabel.setText("Blank field");
+            }else{
+                con = DbConnect.getConnect();
+                try {
+                    pst = con.prepareStatement("update book set bookname=?,category=?,author=?,publisher=?,contents=?,pages=?,edition=? where id=?");
+                    pst.setString(1, name);
+                    pst.setString(2, category);
+                    pst.setString(3, author);
+                    pst.setString(4, publisher);
+                    pst.setString(5, content);
+                    pst.setString(6, page);
+                    pst.setString(7, edition);
+                    pst.setInt(8, id);
+                    int k = pst.executeUpdate();
+                    if(k==1){
+                        txtname.setText("");
+                        txtcategory.getSelectionModel().clearSelection();
+                        txtpublisher.getSelectionModel().clearSelection();
+                        txtauthor.getSelectionModel().clearSelection();
+                        txtcontent.setText("");
+                        txtpage.setText("");
+                        txtedition.setText("");
+                        txtname.requestFocus();
+                        load();
+                    }else{
+                        txtlabel.setText("Update Author failed");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } 
+            }
+        }
+    }
+    public void delete(ActionEvent event){
+        if(table.getSelectionModel().getSelectedIndex()==-1){
+            txtlabel.setText("Item not select");
+        }
+        else{
+            int myIndex = table.getSelectionModel().getSelectedIndex();
+            int id = Integer.parseInt(String.valueOf(table.getItems().get(myIndex).getId()));
+            try {
+                pst=con.prepareStatement("delete from book where id =?");
+                pst.setInt(1, id);
+                int k = pst.executeUpdate();
+                if(k==1){
+                    txtlabel.setText("Author Deleted");
+                    txtname.setText("");
+                    txtcategory.getSelectionModel().clearSelection();
+                    txtpublisher.getSelectionModel().clearSelection();
+                    txtauthor.getSelectionModel().clearSelection();
+                    txtcontent.setText("");
+                    txtpage.setText("");
+                    txtedition.setText("");
+                    txtname.requestFocus();
+                    load();
+                }else{
+                    txtlabel.setText("Delete author failed");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     public void removeAllRows(){
         for ( int i = 0; i<table.getItems().size(); i++) {
             table.getItems().clear(); 
@@ -115,7 +231,7 @@ public class bookController implements Initializable{
                     ));
             }
         } catch (SQLException e) {
-            Logger.getLogger(categoryController.class.getName()).log(Level.SEVERE, null,e);
+            Logger.getLogger(bookController.class.getName()).log(Level.SEVERE, null,e);
         }
         idcol.setCellValueFactory(new PropertyValueFactory<>("id"));
         bookcol.setCellValueFactory(new PropertyValueFactory<>("bookname"));

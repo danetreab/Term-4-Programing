@@ -39,8 +39,8 @@
             "server": "localhost",
             "port": 3308,
             "driver": "MySQL",
-            "name": "3/24",
-            "database": "3/24",
+            "name": "OOP_PROJECT",
+            "database": "project-oop",
             "username": "root",
             "password": ""
         },
@@ -52,8 +52,8 @@
             "server": "localhost",
             "port": 3308,
             "driver": "MySQL",
-            "name": "OOP_PROJECT",
-            "database": "project-oop",
+            "name": "Practice",
+            "database": "practice",
             "username": "root",
             "password": ""
         }

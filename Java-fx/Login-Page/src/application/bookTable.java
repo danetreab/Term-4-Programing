@@ -19,6 +19,7 @@ public class bookTable {
     public bookTable(String id, String bookname,String category,String author,String publisher,String contents,String pages,String edition) {
         this.id = new SimpleStringProperty(id);
         this.bookname = new SimpleStringProperty(bookname);
+        this.category = new SimpleStringProperty(category);
         this.author = new SimpleStringProperty(author);
         this.publisher = new SimpleStringProperty(publisher);
         this.contents = new SimpleStringProperty(contents);
