@@ -57,5 +57,7 @@ body{
     align-items: center;
 }
 .input{
-    height: 50px;
+    height: 60px;
+    border: 1px solid black;
+    margin-bottom: 14px;
 }
