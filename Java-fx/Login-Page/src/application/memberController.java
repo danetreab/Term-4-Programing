@@ -74,9 +74,9 @@ public class memberController implements Initializable {
         }
         else{
             int myIndex = table.getSelectionModel().getSelectedIndex();
-            int id = Integer.parseInt(String.valueOf(table.getItems().get(myIndex).getId()));
+            int id = Integer.parseInt(String.valueOf(table.getItems().get(myIndex).getmid()));
             try {
-                pst=con.prepareStatement("delete from member where id =?");
+                pst=con.prepareStatement("delete from member where mid =?");
                 pst.setInt(1, id);
                 int k = pst.executeUpdate();
                 if(k==1){
@@ -102,7 +102,7 @@ public class memberController implements Initializable {
         }
         else{
             int myIndex = table.getSelectionModel().getSelectedIndex();
-            int id=Integer.parseInt(String.valueOf(table.getItems().get(myIndex).getId()));
+            int id=Integer.parseInt(String.valueOf(table.getItems().get(myIndex).getmid()));
             name = txtname.getText();
             address= txtaddress.getText();
             phone=txtphone.getText();
@@ -145,7 +145,7 @@ public class memberController implements Initializable {
             rs=con.createStatement().executeQuery("select * from member");
             while(rs.next()){
                 list.add(new memberTable(
-                    rs.getString("id"), 
+                    rs.getString("mid"), 
                     rs.getString("name"),
                     rs.getString("address"),
                     rs.getString("phone")
@@ -154,7 +154,7 @@ public class memberController implements Initializable {
         } catch (SQLException e) {
             Logger.getLogger(categoryController.class.getName()).log(Level.SEVERE, null,e);
         }
-        idcol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        idcol.setCellValueFactory(new PropertyValueFactory<>("mid"));
         namecol.setCellValueFactory(new PropertyValueFactory<>("name"));
         addresscol.setCellValueFactory(new PropertyValueFactory<>("address"));
         phonecol.setCellValueFactory(new PropertyValueFactory<>("phone"));

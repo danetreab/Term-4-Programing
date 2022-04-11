@@ -53,7 +53,7 @@ public class returnController implements Initializable {
         if (event.getCode().toString().equals("ENTER")) {
             try {
                 pst = con.prepareStatement(
-                        "SELECT m.name, b.bookname, l.returndate, DATEDIFF(now(), l.returndate) as elap FROM lendbook l JOIN member m ON l.memberid = m.id JOIN book b ON l.bookid = b.id and l.memberid = ?");
+                        "SELECT m.name, b.bookname, l.returndate, DATEDIFF(now(), l.returndate) as elap FROM lendbook l JOIN member m ON l.memberid = m.mid JOIN book b ON l.bookid = b.id and l.memberid = ?");
                 pst.setString(1, id);
                 rs = pst.executeQuery();
                 if (rs.next()) {

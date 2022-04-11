@@ -134,10 +134,10 @@ public class MainmenuController implements Initializable{
         String total="";
         con = DbConnect.getConnect();
         try {
-            pst = con.prepareStatement("select count(id) from member");
+            pst = con.prepareStatement("select count(mid) from member");
             rs = pst.executeQuery();
             if(rs.next()){
-                total=rs.getString("count(id)");
+                total=rs.getString("count(mid)");
                 txtmember.setText(total);
             }
         } catch (SQLException e) {

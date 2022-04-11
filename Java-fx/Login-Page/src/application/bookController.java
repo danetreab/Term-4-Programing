@@ -104,6 +104,10 @@ public class bookController implements Initializable{
         edition = txtedition.getText();
 
         con = DbConnect.getConnect();
+        if(name.equals("")&&content.equals("")&&page.equals("")){
+            txtlabel.setText("Blank field");
+        }
+        else{
             try {
                     pst = con.prepareStatement("insert into book(bookname,category,author,publisher,contents,pages,edition) value (?,?,?,?,?,?,?)");
                     pst.setString(1, name);
@@ -114,20 +118,27 @@ public class bookController implements Initializable{
                     pst.setString(6, page);
                     pst.setString(7, edition);
 
-                    pst.executeUpdate();
-
-                    txtname.setText("");
-                    txtcategory.getSelectionModel().clearSelection();
-                    txtpublisher.getSelectionModel().clearSelection();
-                    txtauthor.getSelectionModel().clearSelection();
-                    txtcontent.setText("");
-                    txtpage.setText("");
-                    txtedition.setText("");
-                    txtname.requestFocus();
-                    load();
+                    int k = pst.executeUpdate();
+                    if(k==1){
+                        txtname.setText("");
+                        txtcategory.getSelectionModel().clearSelection();
+                        txtpublisher.getSelectionModel().clearSelection();
+                        txtauthor.getSelectionModel().clearSelection();
+                        txtcontent.setText("");
+                        txtpage.setText("");
+                        txtedition.setText("");
+                        txtname.requestFocus();
+                        txtlabel.setText("Book added");
+                        load();
+                    }
+                    else{
+                        txtlabel.setText("Add book failed");
+                    }
+                    
             } catch (SQLException ex) {
                     Logger.getLogger(bookController.class.getName()).log(Level.SEVERE, null, ex);
             }
+        }
     }
     public void update(ActionEvent event){
         String name, category, publisher, author,content,page,edition;
@@ -170,7 +181,7 @@ public class bookController implements Initializable{
                         txtname.requestFocus();
                         load();
                     }else{
-                        txtlabel.setText("Update Author failed");
+                        txtlabel.setText("Update Book failed");
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();
@@ -190,7 +201,7 @@ public class bookController implements Initializable{
                 pst.setInt(1, id);
                 int k = pst.executeUpdate();
                 if(k==1){
-                    txtlabel.setText("Author Deleted");
+                    txtlabel.setText("Book Deleted");
                     txtname.setText("");
                     txtcategory.getSelectionModel().clearSelection();
                     txtpublisher.getSelectionModel().clearSelection();
@@ -201,7 +212,7 @@ public class bookController implements Initializable{
                     txtname.requestFocus();
                     load();
                 }else{
-                    txtlabel.setText("Delete author failed");
+                    txtlabel.setText("Delete Book failed");
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
