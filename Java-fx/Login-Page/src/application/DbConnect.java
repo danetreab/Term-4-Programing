@@ -11,13 +11,12 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DbConnect {
-    
-    private static String HOST = "localhost";
-        private static int PORT = 3308;
-        private static String DB_NAME = "project-oop";
-        private static String USERNAME = "root";
-        private static String PASSWORD = "";
+public class DbConnect extends databaseController{
+        private static String HOST = (String) readfile().get(0);
+        private static int PORT = Integer.parseInt((String) readfile().get(1));
+        private static String DB_NAME = (String) readfile().get(2);
+        private static String USERNAME = (String) readfile().get(3);
+        private static String PASSWORD = ((String) readfile().get(4)).equals("None") ? "": (String) readfile().get(4);
         private static Connection connection ;
         
         

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="44.0" layoutY="36.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="About us" textFill="#0091ff">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="108.0" prefHeight="50.0" prefWidth="1040.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Library Management System">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="170.0" prefHeight="160.0" prefWidth="854.0" stylesheets="@../fullpackstyling.css" text="      This project take about 3-4 week to complete, this application is plans to use in library since it reliable and fast, it's build with java and using mysql as the database. We are working as a team with four member" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="320.0" prefHeight="50.0" prefWidth="1040.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Our Team">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="387.0" prefWidth="1040.0" stylesheets="@../fullpackstyling.css" text="Reab Danet">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="416.0" prefWidth="1040.0" stylesheets="@../fullpackstyling.css" text="Sem Pisey">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="449.0" prefWidth="1040.0" stylesheets="@../fullpackstyling.css" text="Theara Sreynit">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="480.0" prefWidth="1040.0" stylesheets="@../fullpackstyling.css" text="Sot tinong">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

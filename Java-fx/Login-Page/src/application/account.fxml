@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="scenepanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.accountController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-width: 2px 2px  0 0; -fx-border-color: #707070; -fx-background-color: #ECEDF6;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton layoutY="120.0" onMouseClicked="#home" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text=" Add User             ">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER_PLUS" size="30" text="" />
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutY="190.0" onMouseClicked="#changepass" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text=" Change Password">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EDIT" size="30" text="" />
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutY="260.0" onMouseClicked="#deleteacc" prefHeight="70.0" prefWidth="240.0" styleClass="button1" stylesheets="@../fullpackstyling.css" text="  Delete User          ">
+               <graphic>
+                  <FontAwesomeIconView glyphName="TRASH" size="30" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="200.0" style="-fx-border-width: 2px 2px 2px 0; -fx-border-color: #707070;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="124.0" prefHeight="37.0" prefWidth="800.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Add new user" textAlignment="CENTER" textFill="#0091ff">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtusername" layoutX="280.0" layoutY="200.0" prefHeight="45.0" prefWidth="240.0" promptText="Username" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+            <TextField fx:id="txtpass" layoutX="280.0" layoutY="270.0" prefHeight="45.0" prefWidth="240.0" promptText="Password" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+            <TextField fx:id="txtpasscon" layoutX="280.0" layoutY="340.0" prefHeight="45.0" prefWidth="240.0" promptText="Confirm-Password" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+            <JFXButton layoutX="280.0" layoutY="425.0" onAction="#submit" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Submit" textFill="#049c02">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="txtlabel" alignment="CENTER" layoutY="397.0" prefHeight="17.0" prefWidth="800.0" stylesheets="@../fullpackstyling.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></AnchorPane>
+   </center>
+</BorderPane>

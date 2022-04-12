@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" prefHeight="694.0" prefWidth="800.0" style="-fx-border-width: 2px 2px 2px 0; -fx-border-color: #707070;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.changepassController">
+   <children>
+      <Label alignment="CENTER" layoutY="124.0" prefHeight="37.0" prefWidth="800.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Change password" textAlignment="CENTER" textFill="#0091ff">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtusername" layoutX="280.0" layoutY="200.0" prefHeight="45.0" prefWidth="240.0" promptText="Username" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <TextField fx:id="txtpass" layoutX="280.0" layoutY="270.0" prefHeight="45.0" prefWidth="240.0" promptText="Password" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <TextField fx:id="txtpasscon" layoutX="280.0" layoutY="340.0" prefHeight="45.0" prefWidth="240.0" promptText="New-Password" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <JFXButton layoutX="280.0" layoutY="425.0" onAction="#submit" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Submit" textFill="#049c02">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="txtlabel" alignment="CENTER" layoutY="397.0" prefHeight="17.0" prefWidth="800.0" stylesheets="@../fullpackstyling.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

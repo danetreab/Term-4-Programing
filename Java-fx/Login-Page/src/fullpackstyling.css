@@ -57,6 +57,10 @@
 .text{
     -fx-font-family: "Fredoka";
 }
+.text2{
+    -fx-font-family: "Fredoka";
+    -fx-font-size : 20;
+}
 .button4
 {
     -fx-background-color :linear-gradient(to top left, #41951C, #D4CEE3);

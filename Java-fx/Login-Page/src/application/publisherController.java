@@ -35,7 +35,7 @@ public class publisherController implements Initializable {
         pname = nametextfield.getText();
         paddress = addresstextfield.getText();
         pcontact = phonetextfield.getText();
-        if(pname.equals("")&&paddress.equals("")&&pcontact.equals("") || pname.equals("")){
+        if(pname.equals("")||paddress.equals("")||pcontact.equals("")){
             txtlabel.setText("Blank field");
         }else{
             try {

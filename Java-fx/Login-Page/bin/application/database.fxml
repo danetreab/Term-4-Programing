@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.databaseController">
+   <children>
+      <Label alignment="CENTER" layoutY="64.0" prefHeight="37.0" prefWidth="1040.0" styleClass="text" stylesheets="@../fullpackstyling.css" text="Setup database" textFill="#0091ff">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txthost" layoutX="400.0" layoutY="160.0" prefHeight="45.0" prefWidth="240.0" promptText="Host" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <TextField fx:id="txtport" layoutX="400.0" layoutY="230.0" prefHeight="45.0" prefWidth="240.0" promptText="Port" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <TextField fx:id="txtdbname" layoutX="400.0" layoutY="300.0" prefHeight="45.0" prefWidth="240.0" promptText="Database-name" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <TextField fx:id="txtusername" layoutX="400.0" layoutY="370.0" prefHeight="45.0" prefWidth="240.0" promptText="Username" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <TextField fx:id="txtpass" layoutX="400.0" layoutY="440.0" prefHeight="45.0" prefWidth="240.0" promptText="Password" styleClass="fillform" stylesheets="@../fullpackstyling.css" />
+      <JFXButton layoutX="400.0" layoutY="530.0" onAction="#submit" prefHeight="50.0" prefWidth="240.0" styleClass="mainbtn" stylesheets="@../fullpackstyling.css" text="Submit" textFill="#049c02">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="txtlabel" alignment="CENTER" layoutY="500.0" prefHeight="19.0" prefWidth="1040.0" stylesheets="@../fullpackstyling.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

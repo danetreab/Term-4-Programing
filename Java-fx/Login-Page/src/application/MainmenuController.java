@@ -81,6 +81,18 @@ public class MainmenuController implements Initializable{
     void returnbtn(MouseEvent event) {
         loader("return");
     }
+    @FXML
+    void account(MouseEvent event){
+        loader("account");
+    }
+    @FXML
+    void database(MouseEvent event){
+        loader("database");
+    }
+    @FXML
+    void about(MouseEvent event) {
+        loader("about");
+    }
     private void loader(String ui){
         Parent root=null;
             try {
