@@ -171,6 +171,7 @@ public class bookController implements Initializable{
                     pst.setInt(8, id);
                     int k = pst.executeUpdate();
                     if(k==1){
+                        txtlabel.setText("Book Updated");
                         txtname.setText("");
                         txtcategory.getSelectionModel().clearSelection();
                         txtpublisher.getSelectionModel().clearSelection();

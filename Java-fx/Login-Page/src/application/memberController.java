@@ -111,7 +111,7 @@ public class memberController implements Initializable {
             }else{
                 con = DbConnect.getConnect();
                 try {
-                    pst = con.prepareStatement("update member set name=?,address=?,phone=? where id=?");
+                    pst = con.prepareStatement("update member set name=?,address=?,phone=? where mid=?");
                     pst.setString(1, name);
                     pst.setString(2, address);
                     pst.setString(3, phone);

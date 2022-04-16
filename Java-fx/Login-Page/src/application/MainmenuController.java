@@ -60,6 +60,9 @@ public class MainmenuController implements Initializable{
     @FXML
     void home(MouseEvent event) {
         scenepanel.setCenter(ap);
+        totalbook();
+        totalauthor();
+        totalmember();
     }
 
     @FXML
