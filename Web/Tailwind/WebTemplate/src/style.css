@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+    font-family: "Spotify";
+    src: url("https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Book.woff2");
+}
+@font-face {
+    font-family: "SpotifyBold";
+    src: url("https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Bold.woff2");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

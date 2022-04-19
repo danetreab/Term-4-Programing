@@ -1,0 +1,352 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/* start part1 */
+.part1{
+
+    width: 100%;
+    position: relative;
+    background-color: black;
+}
+.nav-size{
+    width: 1400px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+.nav-size header .logo h2 {
+    color: white;
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.part1 header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav-size header ul li{
+    list-style: none;
+    display: inline-block;
+}
+.nav-size header ul li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    border-bottom: 2px solid transparent;
+    transition: .4s;
+}
+.nav-size header ul li a:hover{
+    transform: scale(1.2);
+    background: transparent;
+    color: green;
+    transition: .4s;
+}
+/* finish part1 */
+
+/* start part2 */
+.part2{
+    width: 100%;
+    min-height: 450px;
+    overflow: hidden;
+    padding: 0px;
+    background: url(https://www.scdn.co/i/free/bubbles-mobile.svg) center center / 100% 927px no-repeat, linear-gradient(-45deg, rgb(108, 14, 224) -5%, rgb(240, 55, 166)) rgb(108, 14, 224);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.part2 .part2-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media(min-width: 1050px){
+    .part2 .part2-1 .part2-1-1{
+
+        margin-left: 150px;
+        width: 286px;
+        height: 573px;
+        padding-top: 100px;  
+    
+    }
+    
+}
+@media(max-width:1049px){
+    .part2 .part2-1 .part2-1-1{
+
+        display: none;  
+    }
+    
+}
+
+.part2-2 p{
+    text-align: center;
+    color: white;
+    font-size: 65px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    padding: 50px 15px 32px;
+    margin-bottom: 0px;
+}
+.part2-2 a{
+    padding: 1.5em;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    border-radius: 45px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 150px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.part2-2 a:hover{
+    transform: scale(1.2);
+    border: 1px solid #f5dca8;
+    background: transparent;
+    color: white;
+    transition: .4s;
+}
+/* finish part2 */
+
+hr{
+    color: gray;
+}
+.question p{
+
+    text-align: center;
+    font-size: var(--headline-font-size,36px);
+    line-height: var(--headline-line-height,32px);
+    letter-spacing: -0.015em;
+    font-weight: 900;
+    padding: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  
+}
+.question ul{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+}
+.question ul hr{
+    border-color: rgb(255, 255, 255);
+}
+.question ul li.active{
+    text-align: left;
+    list-style: none;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 26px 28px;
+    margin-top: 2px;
+    position: relative;
+    outline: none;
+    margin-right: 0px;
+}
+.question ul li.active:hover{
+    background-color: #f5f4f4;
+}
+strong{
+    color: green;
+}
+.question ul li.active ul.menu-question{
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 30px;   
+    display: none;
+}
+.question ul li.active:hover ul.menu-question{
+    display: block;   
+}
+
+.ready{
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background: url(https://www.scdn.co/i/free/lets-play.svg) center center / 100% no-repeat, linear-gradient(-155deg, rgb(108, 14, 224) 55%, rgb(240, 55, 166) 115%) rgb(108, 14, 224);
+}
+.ready p{
+
+    text-align: center;
+    color: white;
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    padding: 50px 15px 32px;
+    margin-bottom: 0px;
+
+}
+.ready p.button{
+    padding: 1.5em ;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    border-radius: 45px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 150px;
+    transition: 0.4s;
+}
+.ready p.button:hover{
+    transform: translateY(-3px);
+    transform: scale(1.2);
+}
+i{
+   margin-left: inherit;
+}
+
+body {
+    line-height: 1.5;
+}
+
+.footer img {
+    position: absolute;
+    margin-left: 120px;
+    margin-bottom: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: black;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 15%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 10px;
+    color: #bbbbbb;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-weight: 1000;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 10px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 900;
+    display: block;
+    transform: all 0.9s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transform: all 0.9s ease;
+    margin-top: 20px;
+}
+
+.footer-col .social a:hover {
+    color: green;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .title h3{
+          
+            text-align: center;
+            font-size: 46px;
+            padding-top: 60px;
+            font-weight: 900;
+            padding-bottom: 40px;
+        }
+        .grid{
+         
+            display: block;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 60px;
+        }
+      .play{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+}
+.grid img{
+   width: 100px;
+}
+.Design {
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(rgb(176, 35, 194) 15%, rgb(96, 11, 231));
+   padding: 200px 0;
+}
+.Design p{
+    
+    font-weight:bold ;
+    font-size: 62px;
+    color: white;
+}
